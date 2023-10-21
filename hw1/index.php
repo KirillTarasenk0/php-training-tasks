@@ -56,7 +56,7 @@ class Person
 {
     private string $personName;
 
-    public function __construct($personName)
+    public function __construct(string $personName)
     {
         $this->personName = $personName;
     }
@@ -72,7 +72,7 @@ $firstPerson->personSayHi();
 
 //callback функция
 
-function printIsRealAge($age, $callbackFunction): void
+function printIsRealAge(int $age, $callbackFunction): void
 {
     if ($callbackFunction($age)) {
         echo "Человек с таким возрастом может существовать <br><br>";
