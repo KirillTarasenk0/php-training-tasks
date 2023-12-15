@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+.cards__container {
+    display: flex;
+    flex-direction: row;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    background-color: #d5d4d4;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.card:not(:last-child) {
+    margin-right: 20px;
+}
+.card__title {
+    font-size: 20px;
+    color: #5b5bef;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.card__price {
+    font-size: 19px;
+    font-weight: bold;
+    color: #ac0202;
+    padding-bottom: 10px;
+}
+.card__form {
+
+}
+.card__input-container {
+    padding-bottom: 10px;
+}
+.card__input {
+    border: 1px solid grey;
+    padding: 5px 0 5px 10px;
+}
+.card__button-container {
+
+}
+.card__button {
+    background-color: #6dd701;
+    color: #FFFFFF;
+    font-size: 16px;
+    border: 1px solid grey;
+    padding: 5px 10px 5px 10px;
+}
+.card__button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+td{
+    width: 60px;
+    height:60px;
+    border: solid 1px silver;
+    text-align:center;
+}
+.info {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
