@@ -1,0 +1,45 @@
+<?php
+
+require_once "Date.php";
+require_once "Interval.php";
+
+$date1 = new Date();
+$date2 = new Date("2022.12.23");
+echo "День года номер 1: " . $date1->getDay() . "<br>";
+echo "День года номер 2: " . $date2->getDay() . "<br>";
+echo "Месяц года номер 1: " . $date1->getMonth() . "<br>";
+echo "Месяц года номер 2: " . $date2->getMonth("word") . "<br>";
+echo "Год номер 1: " . $date1->getYear() . "<br>";
+echo "Год номер 2: " . $date2->getYear() . "<br>";
+$date1->addDay(10);
+$date2->addDay(29);
+echo "День года номер 1: " . $date1->getDay() . "<br>";
+echo "День года номер 2: " . $date2->getDay() . "<br>";
+$date1->subDay(3);
+$date2->subDay(30);
+echo "День года номер 1: " . $date1->getDay() . "<br>";
+echo "День года номер 2: " . $date2->getDay() . "<br>";
+$date1->addMonth(1);
+$date2->addMonth(12);
+echo "Месяц года номер 1: " . $date1->getMonth() . "<br>";
+echo "Месяц года номер 2: " . $date2->getMonth() . "<br>";
+$date1->subMonth(1);
+$date2->subMonth(12);
+echo "Месяц года номер 1: " . $date1->getMonth() . "<br>";
+echo "Месяц года номер 2: " . $date2->getMonth() . "<br>";
+$date1->addYear(1);
+$date2->addYear(22);
+echo "Год номер 1: " . $date1->getYear() . "<br>";
+echo "Год номер 2: " . $date2->getYear() . "<br>";
+$date1->subYear(1);
+$date2->subYear(22);
+echo "Год номер 1: " . $date1->getYear() . "<br>";
+echo "Год номер 2: " . $date2->getYear() . "<br>";
+$date1->format("string");
+$date2->format("key-value");
+echo $date1 . "<br>";
+echo $date2 . "<br>";
+$interval = new Interval($date1, $date2);
+echo "Интервал в днях: " . $interval->toDays() . "<br>";
+echo "Интервал в месяцах: " . $interval->toMonths() . "<br>";
+echo "Интервал в годах: " . $interval->toYears() . "<br>";
